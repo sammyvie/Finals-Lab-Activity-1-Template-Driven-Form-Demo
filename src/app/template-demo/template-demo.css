@@ -1,0 +1,139 @@
+/* Remove default body margin (important for perfect centering) */
+:host {
+  display: block;
+}
+
+/* Page Background + Perfect Center */
+.main-wrapper {
+  background-color: #fff0f3;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* Form Card */
+.form-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 460px;
+  padding: 2.5rem;
+  border-radius: 24px;
+  border: 1px solid #f8bbd0;
+  box-shadow: 0 15px 35px rgba(244, 194, 194, 0.4);
+}
+
+/* Title */
+.title {
+  color: #ad1457;
+  font-weight: 800;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.title-underline {
+  width: 50px;
+  height: 4px;
+  background-color: #f4c2c2;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #880e4f;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs */
+input, select, textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #fce4ec;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #f06292;
+  box-shadow: 0 0 0 4px rgba(240, 98, 146, 0.1);
+}
+
+/* Radio Buttons */
+.radio-container {
+  display: flex;
+  gap: 20px;
+  padding: 10px 15px;
+  background-color: #fff8fa;
+  border-radius: 12px;
+  border: 1px dashed #f8bbd0;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-transform: none;
+  margin: 0;
+}
+
+.radio-item input {
+  width: auto;
+  margin-right: 8px;
+  accent-color: #f06292;
+}
+
+/* Submit Button */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #f4c2c2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #f06292;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(240, 98, 146, 0.3);
+}
+
+.btn-submit:disabled {
+  background-color: #fce4ec;
+  color: #ad1457;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Results Box */
+.result-box {
+  background-color: #fce4ec;
+  padding: 15px;
+  border-radius: 12px;
+  color: #880e4f;
+  font-size: 0.9rem;
+}
+
+/* Error Text */
+.error {
+  color: #e91e63;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: block;
+}

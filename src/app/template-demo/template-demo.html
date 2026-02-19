@@ -1,0 +1,111 @@
+<div class="main-wrapper">
+  <div class="form-card">
+    <div class="text-center mb-4">
+      <h2 class="title">{{ title }}</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+
+      <div class="form-group mb-3">
+        <label>Username</label>
+        <input type="text"
+               name="username"
+               [(ngModel)]="user.username"
+               placeholder="Enter username"
+               required
+               #uname="ngModel">
+        <small class="error" *ngIf="uname.invalid && uname.touched">
+          Username is required.
+        </small>
+      </div>
+
+      <div class="form-group mb-3">
+        <label>Email</label>
+        <input type="email"
+               name="email"
+               [(ngModel)]="user.email"
+               placeholder="email@example.com"
+               required
+               email>
+      </div>
+
+      <div class="form-group mb-3">
+        <label>Password</label>
+        <input type="password"
+               name="password"
+               [(ngModel)]="user.password"
+               placeholder="••••••••"
+               required>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-6">
+          <label>Role</label>
+          <select name="role"
+                  [(ngModel)]="user.role"
+                  required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="Admin">Admin</option>
+            <option value="Guest">Guest</option>
+          </select>
+        </div>
+
+        <div class="col-6">
+          <label>Status</label>
+          <select name="status"
+                  [(ngModel)]="user.status"
+                  required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Permanent">Permanent</option>
+            <option value="Probationary">Probationary</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <label>Gender</label>
+        <div class="radio-container">
+          <label class="radio-item">
+            <input type="radio"
+                   name="gender"
+                   [(ngModel)]="user.gender"
+                   value="Male"
+                   required>
+            <span>Male</span>
+          </label>
+
+          <label class="radio-item">
+            <input type="radio"
+                   name="gender"
+                   [(ngModel)]="user.gender"
+                   value="Female"
+                   required>
+            <span>Female</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <label>Comments</label>
+        <textarea name="comments"
+                  [(ngModel)]="user.comments"
+                  rows="2"
+                  placeholder="Write your notes here..."></textarea>
+      </div>
+
+      <button type="submit"
+              [disabled]="!userForm.valid"
+              class="btn-submit">
+        Submit Form
+      </button>
+    </form>
+
+    <div *ngIf="isSubmitted" class="result-box mt-4">
+      <h6 class="fw-bold">Form Submitted:</h6>
+      <p><strong>Username:</strong> {{ submittedUser.username }}</p>
+      <p><strong>Email:</strong> {{ submittedUser.email }}</p>
+      <p><strong>Role:</strong> {{ submittedUser.role }}</p>
+    </div>
+  </div>
+</div>
