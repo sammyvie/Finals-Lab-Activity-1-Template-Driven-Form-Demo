@@ -11,16 +11,16 @@ import { CommonModule } from '@angular/common';
 })
 export class TemplateDemo {
   title = 'Finals Lab Activity 1';
-  isSubmitted = false; // Tracks if the form was submitted
+  isSubmitted = false; 
 
   user = {
     username: '',
     email: '',
     password: '',
     role: '',
-    gender: '',    // Task: Added Field 1
-    status: '',    // Task: Added Field 2
-    comments: ''   // Task: Added Field 3
+    gender: '',    
+    status: '',   
+    comments: '' 
   };
 
   submittedUser = { ...this.user };
