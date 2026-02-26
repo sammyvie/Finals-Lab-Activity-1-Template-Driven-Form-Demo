@@ -28,7 +28,7 @@ export class TemplateDemo {
   onSubmit(form: any) {
     if (form.valid) {
       this.isSubmitted = true;
-      this.submittedUser = { ...this.user }; // Capture current data
+      this.submittedUser = { ...this.user }; 
       console.log('Form Data:', this.submittedUser);
     }
   }
