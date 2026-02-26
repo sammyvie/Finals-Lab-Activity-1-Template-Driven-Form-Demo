@@ -15,19 +15,16 @@ export class CustomizeDemo {
   isSubmitted: boolean = false;
 
   constructor(private fb: FormBuilder) {
-    // We remove the 'agree' validator because it's not in your HTML
-    // We ensure serviceType and priority are handled correctly
     this.customForm = this.fb.group({
       fullName: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       description: [''],
       serviceType: ['', Validators.required],
-      priority: ['Normal'] // Default value
+      priority: ['Normal'] 
     });
   }
 
   nextStep() {
-    // Only proceed to Step 2 if Step 1 fields are valid
     if (this.customForm.get('fullName')?.valid &&
         this.customForm.get('phone')?.valid) {
       this.step = 2;
