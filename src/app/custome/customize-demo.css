@@ -78,7 +78,6 @@
   background: #fff8fa;
 }
 
-/* Highlighting the selected radio card */
 .service-card:has(input:checked) {
   background: #fce4ec;
   border-color: #f06292;
