@@ -132,7 +132,6 @@ input:focus, select:focus, textarea:focus {
 }
 
 
-/* Styling for the error messages below inputs */
 .error-msg {
   color: #ff4d4d; 
   font-size: 0.75rem;
@@ -141,7 +140,6 @@ input:focus, select:focus, textarea:focus {
   font-style: italic;
 }
 
-/* Ensure invalid inputs get a slight red border when touched */
 input.ng-invalid.ng-touched,
 select.ng-invalid.ng-touched {
   border-color: #ff4d4d;
